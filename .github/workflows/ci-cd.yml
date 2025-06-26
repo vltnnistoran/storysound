@@ -25,12 +25,15 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: StorySound
 
       - name: Build
         run: dotnet build --no-restore --configuration Release
+        working-directory: StorySound
 
       - name: Test
         run: dotnet test --no-build --verbosity normal
+        working-directory: StorySound
 
   docker-build:
     needs: build-and-test
