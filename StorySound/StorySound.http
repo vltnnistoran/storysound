@@ -1,0 +1,6 @@
+@StorySound_HostAddress = http://localhost:5034
+
+GET {{StorySound_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
